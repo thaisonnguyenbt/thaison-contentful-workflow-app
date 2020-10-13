@@ -1,5 +1,5 @@
 import React from 'react';
-import { Paragraph } from '@contentful/forma-36-react-components';
+import { Note } from '@contentful/forma-36-react-components';
 import { FieldExtensionSDK } from 'contentful-ui-extensions-sdk';
 
 interface FieldProps {
@@ -7,7 +7,9 @@ interface FieldProps {
 }
 
 const Field = (props: FieldProps) => {
-  return <Paragraph>Hello Entry Field Component</Paragraph>;
+
+  console.log(props.sdk.window.updateHeight(50));
+  return <Note>This field is edited in the Side Bar</Note>;
 };
 
 export default Field;
